@@ -167,6 +167,9 @@ android {
             isMinifyEnabled = false
             isShrinkResources = false
             signingConfig = signingConfigs.getByName("debug")
+            // Sideload-testing build: installs alongside the official app with its
+            // own data ("GameNative Dev" label comes from src/debug/res).
+            applicationIdSuffix = ".dev"
         }
         release {
             isMinifyEnabled = true
